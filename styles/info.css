@@ -1,0 +1,82 @@
+div.information{
+    padding: 15px 20px;
+}
+div.information > p:first-child{
+    color: hsl(26, 100%, 55%);
+    font-weight: 700;
+    font-size: 15px;
+}
+div.information > p:last-child{
+    color: hsl(219, 9%, 45%);
+}
+div.information > h2{
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+div.price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+div.price-original{
+    display: flex;
+    align-items: center;
+}
+div.price-original > span{
+    padding: 2px 5px;
+    background-color: hsl(25, 100%, 94%);
+    color: hsl(26, 100%, 55%);
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+div.price > p:last-child{
+    text-decoration: line-through;
+    opacity: 70%;
+}
+
+div.count{
+    display: flex;
+    background-color: hsl(25, 100%, 94%);
+    border-radius: 5px;
+    margin-top: 15px;
+}
+div.count > span{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+input[type='number']{
+    flex-grow: 1;
+    outline: none;
+    text-align: center;
+    background-color: hsl(25, 100%, 94%);
+    border: none;
+    font-weight: 900;
+    color: #000;
+}
+
+/** Add to cart **/
+
+button.add-to-cart{
+    background-color: hsl(26, 100%, 55%);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    border: none;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+button.add-to-cart > img{
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+    color: #fff;
+}

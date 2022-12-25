@@ -2,43 +2,138 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+
+  <!--My personal styles-->
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/nav.css">
+  <link rel="stylesheet" href="./styles/media.css">
+  <link rel="stylesheet" href="./styles/courasel.css">
+  <link rel="stylesheet" href="./styles/cart.css">
+  <link rel="stylesheet" href="./styles/info.css">
   
   <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+  <!--Navigation-->
+  <nav>
+    <div class="logo">
+      <div onclick="openNav()">
+        <img src="./images/icon-menu.svg" alt="hamuger">
+      </div>
+      <div>
+        <img src="./images/logo.svg" alt="logo">
+      </div>
+      <div class="main-links">
+        <a href="#">Collection</a>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="profile">
+      <div title="Cart" onclick="openCart()">
+        <img src="./images/icon-cart.svg" alt="cart">
+        <span id="cart-count">
+          1
+        </span>
+      </div>
+      <div title="Profile">
+        <img src="./images/image-avatar.png" alt="avatar">
+      </div>
+    </div>
+  </nav>
 
-  Sneaker Company
+  <!--Overlay-->
 
-  Fall Limited Edition Sneakers
+  <div id="overlay">
+    <div class="close" onclick="closeNav()">
+      <img src="./images/icon-close.svg" alt="close icon">
+    </div>
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+    <div>
+      <a href="#">Collection</a>
+      <a href="#">Men</a>
+      <a href="#">Women</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
 
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <!---->
+
+  <!--Courasel-->
+
+  <div class="courasel">
+
+    <div class="wrapper">
+      <div class="main-courasel">
+        <div class="slider">
+          <img src="./images/image-product-1.jpg" alt="Image 1" id="courasel-img">
+        </div>        
+        <a href="#" onclick="courasel(-1)" class="navigate"> <img src="./images/icon-previous.svg" alt="previous"></a>
+        <a href="#" onclick="courasel(+1)" id="right"> <img src="./images/icon-next.svg" alt="next"></a>
+      </div>
+    </div>
+
+    <div class="information">
+      <p>SNEAKER COMPANY</p>
+      <h2>Fall Limited Edition Sneakers</h2>
+      <p>These low profile sneakers are your perfect
+        casual wear companion. Featuring a durable
+        rubber outer sole, they'll withstand everything the weather an offer.
+      </p>
+
+      <div class="price">
+      <div class="price-original">
+        <h2>$125.00</h2>
+        <span>50%</span>
+      </div>
+      <p>$250.00</p>
+      </div>
+
+      <div class="count">
+        <span onclick="count(-1)"><img src="./images/icon-minus.svg" alt="minus"></span>
+        <input type="number" min="0" id="number">
+        <span onclick="count(+1)"><img src="./images/icon-plus.svg" alt="plus"></span>
+      </div>
+
+      <button class="add-to-cart">
+        <img src="./images/icon-cart.svg" alt="cart">
+        <p>Add to cart</p>
+      </button>
+
+
+
+    </div>
+
+  </div>
+
+  <!--Cart-->
+  <div class="cart">
+    <div class="cart-heading">
+      <h5>Cart</h5>
+      <img src="./images/icon-close.svg" alt="close" onclick="closeCart()">
+    </div>
+    <div class="cart-information">
+      <p id="empty">Your cart is empty</p>
+    </div>
+  </div>
+
+
+  
+  <script src="./scripts/script.js"></script>
 </body>
 </html>

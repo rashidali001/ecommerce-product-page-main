@@ -1,0 +1,117 @@
+div.main-links{
+    display: none;
+    height: 100px;
+}
+div.main-links > a{
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+    color: hsl(219, 9%, 45%);
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+div.main-links > a:hover{
+    border-bottom: 3px solid hsl(26, 100%, 55%);
+    margin-bottom: -2.5px;
+}
+
+div.main-links > a:not(:first-child){
+    margin-left: 7px;
+}
+
+nav, div.logo, div.profile{
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    justify-content: space-between;
+    padding: 15px 22px;
+}
+
+div.logo > div:first-child{
+    cursor: pointer;
+}
+
+div.logo > div:nth-child(2){
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+div.profile > div:first-child{
+    position: relative;
+}
+
+#cart-count{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: hsl(26, 100%, 55%);
+    padding: 0 8px;
+    border-radius: 50px;
+    font-size: 10px;
+    color: #fff;
+    display: none;
+}
+
+div.profile > div:first-child{
+    margin-right: 10px;
+}
+div.profile > div:last-child{
+    width: 24px;
+    height: 24px;
+}
+/*Style fo the profile image*/
+div.profile > div:last-child > img{
+    width: 100%;
+    height: auto;
+}
+
+#overlay{
+    z-index: 9999;
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow: hidden;
+    animation-name: overlay;
+    animation-duration: 1s;
+    width: 65%;
+}
+
+@keyframes overlay {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 65%;
+    }
+}
+
+#overlay > div:last-child{
+    margin: 50px 0;
+    padding-left: 20px;
+}
+
+#overlay > div:last-child > a {
+    display: block;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 20px 0;
+    color: #000;
+}
+div.close{
+    margin: 20px;
+}
+div.profile > div{
+    cursor: pointer;
+}
+div.profile > div:last-child:hover{
+    border: 2px solid hsl(26, 100%, 55%);
+    border-radius: 50%;
+}

@@ -1,0 +1,73 @@
+div.courasel{
+    display: flex;
+    flex-direction: column;
+}
+div.wrapper, div.information{
+    width: 100%;
+}
+div.main-courasel{
+    position: relative;
+}
+div.slider{
+    position: relative;
+}
+div.slider > img{
+    position: relative;
+    width: 100%;
+    height: auto;
+    animation-name: slide;
+    animation-duration: 0.5s;
+}
+
+/*@keyframes slide {
+    from{
+        right: 100%;
+        width:0;
+        height: 100%;
+    }
+    to{
+        width: 100%;
+        right: 0;
+    }
+}*/
+
+a.navigate{
+    position: absolute;
+    background-color: #fff;
+    padding: 3.5px 5px;
+    padding-right: 7px;
+    top: 50%;
+    left: 10px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+a.navigate > img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    padding: 1%;
+
+}
+a#right{
+    position: absolute;
+    background-color: #fff;
+    padding: 3.5px 5px;
+    padding-left: 7px;
+    top: 50%;
+    right: 10px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+a#right > img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    padding: 1%;
+}

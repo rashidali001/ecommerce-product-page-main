@@ -1,0 +1,38 @@
+/* Nav media queries */
+
+@media (min-width:500px){
+    nav{
+        padding: 15px 35px;
+    }
+}
+
+@media (min-width: 800px){
+    div.main-links{
+        display: flex;
+        margin-left: 20px;        
+        align-items: center;
+        align-content: center;
+    }
+    div.logo > div:first-child{
+        display: none;
+    }
+    nav{
+        width: 80%;
+        margin: auto;
+        padding-top: 15px;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        border-bottom: 1px solid hsl(219, 9%, 45%);
+    }
+    div.logo > div:nth-child(2){
+        margin-left: 0;
+        
+    }
+    div.profile > div:last-child{
+        width: 27px;
+        height: 27px;
+    }
+}
+
+/* Courasel media queries */
