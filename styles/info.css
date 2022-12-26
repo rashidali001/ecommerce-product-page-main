@@ -31,6 +31,32 @@ div.price-original > span{
     margin-left: 10px;
     border-radius: 5px;
 }
+@media (min-width:800px){
+    div.price-original{
+    }
+    div.price-original > h3{
+        font-size: 14px;
+    }
+    div.price-original > span{
+       font-size: 12px;
+    }
+    div.price > p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 950px){
+    div.price-original > h3{
+        font-size: 18px;
+    }
+    div.price-original > span{
+       font-size: 14px;
+    }
+    div.price > p {
+        font-size: 18px;
+    }
+
+}
 
 div.price > p:last-child{
     text-decoration: line-through;
