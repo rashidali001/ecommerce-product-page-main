@@ -80,6 +80,37 @@ function count(value){
     number.value = num;
 }
 
+/* Popup */
+
+let pos;
+
+function popUpImg(value){
+    pos = value;
+    let popup = document.querySelector('div.popup');
+    let body = document.querySelector('body');
+    let popup_img = document.querySelector('#popup-img');
+
+    popup_img.src = images[value];
+    body.style.backgroundColor = 'rgba(0,0,0,0.7)';
+    popup.style.display = 'flex';
+}
+
+function closePopup(){
+    let popup = document.querySelector('div.popup');
+    let body = document.querySelector('body');
+
+    body.style.backgroundColor = 'white';    
+    popup.style.display = 'none';
+
+}
+
+function changecourasel(value){
+    
+    let img = document.querySelector('#popup-img');
+    let change;    
+}
+
+
 
 
 

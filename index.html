@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="./styles/courasel.css">
   <link rel="stylesheet" href="./styles/cart.css">
   <link rel="stylesheet" href="./styles/info.css">
+  <link rel="stylesheet" href="./styles/popup.css">
   
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
@@ -73,6 +74,13 @@
   </div>
 
   <!---->
+  <!--Popup-->
+  <div class="popup">
+    <span onclick="closePopup()">X</span>
+    <img alt="Images" id="popup-img">
+    <button onclick="changecourasel(-1)" class="nav"> <img src="./images/icon-previous.svg" alt="previous"></button>
+    <button onclick="changecourasel(+1)" id="rig"> <img src="./images/icon-next.svg" alt="next"></button>
+  </div>
 
   <!--Courasel-->
 
@@ -83,14 +91,14 @@
         <div class="slider">
           <img src="./images/image-product-1.jpg" alt="Image 1" id="courasel-img">
           <div class="images">
-            <img src="./images/image-product-1-thumbnail.jpg" alt="image1">
-            <img src="./images/image-product-2-thumbnail.jpg" alt="image2">
-            <img src="./images/image-product-3-thumbnail.jpg" alt="image3">
-            <img src="./images/image-product-4-thumbnail.jpg" alt="image4">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="image1" onclick="popUpImg(0)">
+            <img src="./images/image-product-2-thumbnail.jpg" alt="image2" onclick="popUpImg(1)">
+            <img src="./images/image-product-3-thumbnail.jpg" alt="image3" onclick="popUpImg(2)">
+            <img src="./images/image-product-4-thumbnail.jpg" alt="image4" onclick="popUpImg(3)">
           </div>
         </div>        
-        <a href="#" onclick="courasel(-1)" class="navigate"> <img src="./images/icon-previous.svg" alt="previous"></a>
-        <a href="#" onclick="courasel(+1)" id="right"> <img src="./images/icon-next.svg" alt="next"></a>
+        <a href="#popup-img" onclick="courasel(-1)" class="navigate"> <img src="./images/icon-previous.svg" alt="previous"></a>
+        <a href="#popup-img" onclick="courasel(+1)" id="right"> <img src="./images/icon-next.svg" alt="next"></a>
       </div>
     </div>
 
@@ -104,10 +112,10 @@
 
       <div class="price">
       <div class="price-original">
-        <h2>$125.00</h2>
+        <h2>Kshs 2500.00</h2>
         <span>50%</span>
       </div>
-      <p>$250.00</p>
+      <p>Kshs 5000.00</p>
       </div>
 
       <div class="count">
