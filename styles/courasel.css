@@ -2,6 +2,10 @@ div.courasel{
     display: flex;
     flex-direction: column;
 }
+div.images{
+    display: none;
+}
+
 div.wrapper, div.information{
     width: 100%;
 }
@@ -70,4 +74,44 @@ a#right > img{
     height: auto;
     border-radius: 50%;
     padding: 1%;
+}
+
+div.images > img{
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+}
+div.images > img:hover{
+    border: 4px solid hsl(26, 100%, 55%);
+}
+
+@media(min-width: 800px){
+    div.courasel{
+        flex-direction: row;
+        width: 80%;
+        margin: 50px auto;
+        justify-content: space-between;
+    }
+    div.wrapper, div.information{
+        width: 48%;
+    }   
+    a.navigate{
+        display: none;
+    }
+    a#right{
+        display: none;
+    }
+    p.description{
+        width: 100%;
+    }
+    div.images{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    div.images > img{
+        width: 23%;
+        height: auto;
+        border-radius: 5px;
+    }
 }

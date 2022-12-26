@@ -36,3 +36,20 @@
 }
 
 /* Courasel media queries */
+
+
+
+/* information media queries */
+@media (min-width:500px)
+{
+    p.description
+    {
+       width: 70%;
+    }
+}
+@media(min-width: 700px){
+    div.courasel{
+        display: none;
+    }
+   
+}

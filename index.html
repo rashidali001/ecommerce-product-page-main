@@ -82,6 +82,12 @@
       <div class="main-courasel">
         <div class="slider">
           <img src="./images/image-product-1.jpg" alt="Image 1" id="courasel-img">
+          <div class="images">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="image1">
+            <img src="./images/image-product-2-thumbnail.jpg" alt="image2">
+            <img src="./images/image-product-3-thumbnail.jpg" alt="image3">
+            <img src="./images/image-product-4-thumbnail.jpg" alt="image4">
+          </div>
         </div>        
         <a href="#" onclick="courasel(-1)" class="navigate"> <img src="./images/icon-previous.svg" alt="previous"></a>
         <a href="#" onclick="courasel(+1)" id="right"> <img src="./images/icon-next.svg" alt="next"></a>
@@ -91,7 +97,7 @@
     <div class="information">
       <p>SNEAKER COMPANY</p>
       <h2>Fall Limited Edition Sneakers</h2>
-      <p>These low profile sneakers are your perfect
+      <p class="description">These low profile sneakers are your perfect
         casual wear companion. Featuring a durable
         rubber outer sole, they'll withstand everything the weather an offer.
       </p>
@@ -105,9 +111,9 @@
       </div>
 
       <div class="count">
-        <span onclick="count(-1)"><img src="./images/icon-minus.svg" alt="minus"></span>
-        <input type="number" min="0" id="number">
-        <span onclick="count(+1)"><img src="./images/icon-plus.svg" alt="plus"></span>
+        <span onclick="count(-1)" style="border-radius: 5px 0 0 5px;"><img src="./images/icon-minus.svg" alt="minus"></span>
+        <input type="number" min="0" id="number" disabled>
+        <span onclick="count(+1)" style="border-radius: 0 5px 5px 0;"><img src="./images/icon-plus.svg" alt="plus"></span>
       </div>
 
       <button class="add-to-cart">

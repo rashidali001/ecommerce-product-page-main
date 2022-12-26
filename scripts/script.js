@@ -71,16 +71,13 @@ number.value = num;
 function count(value){
     num = parseInt(number.value);
     num += value;
-    
+
     if (num < 0)
     {
         num = 0;
     }
     
     number.value = num;
-    
-
-
 }
 
 
