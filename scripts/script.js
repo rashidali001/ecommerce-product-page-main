@@ -77,7 +77,13 @@ function addChartItems(){
     cart_list.appendChild(cart_delete);
     let img_delete = document.createElement('img');
     img_delete.src = './images/icon-delete.svg';
+    img_delete.onclick = removeElement;
     cart_delete.appendChild(img_delete);
+}
+
+function removeElement(){
+    let parent = this.parentElement.parentElement;
+    parent.remove();
 }
 
 
