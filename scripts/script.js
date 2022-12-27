@@ -116,18 +116,15 @@ function addChartItems(){
     notification();
 }
 
-
 function removeElement(){
     let parent = this.parentElement.parentElement;
-    parent.remove();
+    
     let previous = this.parentElement.previousSibling;
     let x = previous.childNodes[1]; // <span class="cart-total">
     let y = x.childNodes[1]; // <span class="cart-count">
-
     total_count -= y.innerHTML; // reducing the count on the notification
-    console.log(total_count);
-    notification(1);    
-    
+   
+    parent.remove();
     cart_items--;
     if (cart_items == 0)
     {
@@ -142,6 +139,7 @@ function removeElement(){
         let checkout = document.querySelector('div.checkout');
         checkout.remove();
     }
+    updateCartCount();
 }
 
 /* Opening Overlay nav */
@@ -249,43 +247,34 @@ function closePopup(){
     popup.style.display = 'none';
 
 }
-
+/*
 function changecourasel(value){
     
     let img = document.querySelector('#popup-img');
     let change;    
-}
+}*/
 
-function notification( value = 0){
+function notification(){
     
-    if (value == 0){
         let title = document.querySelector('#title-cart');
         let notification_display = document.createElement('span');
         notification_display.classList.add('cart-counts');
         let notification_display_text = document.createTextNode(total_count);
         notification_display.appendChild(notification_display_text);
         title.appendChild(notification_display);
-    }
-    else{
-        let cart_count_delete = document.querySelector('span.cart-counts');
-        if (total_count == 0)
-        {            
-            console.log("entered here");
-        }
-        else
-        {
-            cart_count_delete.remove();
-            let title = document.querySelector('#title-cart');
-            let notification_display = document.createElement('span');
-            notification_display.classList.add('cart-counts');
-            let notification_display_text = document.createTextNode(total_count);
-            notification_display.appendChild(notification_display_text);
-            title.appendChild(notification_display);
-        }
-        
-    }
 }
 
+function updateCartCount()
+{
+    let cart_count_update = document.querySelector('span.cart-counts');
+    if (total_count == 0)
+    {
+        cart_count_update.remove();
+    }
+    else{
+       
+    }
+}
 
 
 
