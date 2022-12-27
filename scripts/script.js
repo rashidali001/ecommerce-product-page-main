@@ -30,6 +30,16 @@ function addChartItems(){
     {
         let empty = document.querySelector('div.empty');
         empty.remove();
+
+        /* Adding checkout */
+
+        let cart_information = document.querySelector('div.cart-information');
+        let checkout = document.createElement('div');
+        let checkout_text = document.createTextNode('Checkout');
+        checkout.classList.add('checkout');
+        checkout.appendChild(checkout_text);
+        cart_information.appendChild(checkout);
+
     }
 
 
@@ -108,7 +118,6 @@ function removeElement(){
     let parent = this.parentElement.parentElement;
     parent.remove();
     cart_items--;
-    console.log(cart_items);
     if (cart_items == 0)
     {
         let cart_information = document.querySelector('div.cart-information');
@@ -117,6 +126,10 @@ function removeElement(){
         empty.appendChild(empty_text);
         empty.classList.add('empty');
         cart_information.appendChild(empty);
+
+        /* remove checkout */
+        let checkout = document.querySelector('div.checkout');
+        checkout.remove();
     }
 }
 
