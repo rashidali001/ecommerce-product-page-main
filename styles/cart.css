@@ -31,9 +31,10 @@ div.cart-information{
     flex-direction: column;
     height: auto;
 }
-p#empty{
+div.empty{
     color: hsl(219, 9%, 45%);
-    display: none;
+    padding: 10px;
+    text-align: center;
 }
 
 @media (min-width: 800px){
