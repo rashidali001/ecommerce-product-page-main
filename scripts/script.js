@@ -1,5 +1,6 @@
 /* cart */ 
 let cart_items = 0;
+let total_count = 0;
 
 if (cart_items == 0)
 {
@@ -42,11 +43,10 @@ function addChartItems(){
 
     }
 
-
-
     let item_count = parseInt(cart_number.value);
     let item_price = parseInt(document.querySelector('span.price-tag').innerText);
     let item_total = item_count * item_price;
+    total_count += item_count;
     let item_heading = document.querySelector('h2.sneaker_title').innerText;
 
      
@@ -100,7 +100,9 @@ function addChartItems(){
         let cart_total_price_text = document.createTextNode(' Kshs' + item_total);
         cart_total_price.appendChild(cart_total_price_text);
         cart_pricing.appendChild(cart_total_price);
-    
+
+    /* creating the third child */
+
     let cart_delete = document.createElement('div');
     cart_delete.classList.add('cart-delete');
     cart_list.appendChild(cart_delete);
@@ -111,12 +113,21 @@ function addChartItems(){
 
     /* return cart value to o */
     cart_number.value = 0;
+    notification();
 }
 
 
 function removeElement(){
     let parent = this.parentElement.parentElement;
     parent.remove();
+    let previous = this.parentElement.previousSibling;
+    let x = previous.childNodes[1]; // <span class="cart-total">
+    let y = x.childNodes[1]; // <span class="cart-count">
+
+    total_count -= y.innerHTML; // reducing the count on the notification
+    console.log(total_count);
+    notification(1);    
+    
     cart_items--;
     if (cart_items == 0)
     {
@@ -132,12 +143,6 @@ function removeElement(){
         checkout.remove();
     }
 }
-
-
-
-
-
-
 
 /* Opening Overlay nav */
 
@@ -251,7 +256,35 @@ function changecourasel(value){
     let change;    
 }
 
-
+function notification( value = 0){
+    
+    if (value == 0){
+        let title = document.querySelector('#title-cart');
+        let notification_display = document.createElement('span');
+        notification_display.classList.add('cart-counts');
+        let notification_display_text = document.createTextNode(total_count);
+        notification_display.appendChild(notification_display_text);
+        title.appendChild(notification_display);
+    }
+    else{
+        let cart_count_delete = document.querySelector('span.cart-counts');
+        if (total_count == 0)
+        {            
+            console.log("entered here");
+        }
+        else
+        {
+            cart_count_delete.remove();
+            let title = document.querySelector('#title-cart');
+            let notification_display = document.createElement('span');
+            notification_display.classList.add('cart-counts');
+            let notification_display_text = document.createTextNode(total_count);
+            notification_display.appendChild(notification_display_text);
+            title.appendChild(notification_display);
+        }
+        
+    }
+}
 
 
 

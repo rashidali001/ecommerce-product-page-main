@@ -45,7 +45,7 @@ div.profile > div:first-child{
     position: relative;
 }
 
-#cart-count{
+span.cart-counts{
     position: absolute;
     top: -5px;
     right: -5px;
@@ -54,7 +54,6 @@ div.profile > div:first-child{
     border-radius: 50px;
     font-size: 10px;
     color: #fff;
-    display: none;
 }
 
 div.profile > div:first-child{
