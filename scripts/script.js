@@ -259,21 +259,23 @@ function notification(){
         let title = document.querySelector('#title-cart');
         let notification_display = document.createElement('span');
         notification_display.classList.add('cart-counts');
-        let notification_display_text = document.createTextNode(total_count);
-        notification_display.appendChild(notification_display_text);
+       /* let notification_display_text = document.createTextNode(total_count);
+        notification_display.appendChild(notification_display_text);*/
         title.appendChild(notification_display);
 }
 
 function updateCartCount()
-{
-    let cart_count_update = document.querySelector('span.cart-counts');
+{    
+    let cart_count_update =document.querySelector('span.cart-counts');
     if (total_count == 0)
     {
+        
         cart_count_update.remove();
     }
     else{
-       
+        cart_count_update.remove();
     }
+
 }
 
 

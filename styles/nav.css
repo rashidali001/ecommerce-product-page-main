@@ -48,12 +48,12 @@ div.profile > div:first-child{
 span.cart-counts{
     position: absolute;
     top: -5px;
-    right: -5px;
+    right: -2px;
     background-color: hsl(26, 100%, 55%);
-    padding: 0 8px;
-    border-radius: 50px;
-    font-size: 10px;
+    border-radius: 50%;
     color: #fff;
+    width: 10px;
+    height: 10px;
 }
 
 div.profile > div:first-child{
