@@ -8,8 +8,10 @@ if (cart_items == 0)
     let empty_text = document.createTextNode('Your cart is empty!');
     empty.appendChild(empty_text);
     empty.classList.add('empty');
-    cart_information.appendChild(empty)
+    cart_information.appendChild(empty);
 }
+
+
 
 /* Add to cart script */
 function addChartItems(){
@@ -20,6 +22,17 @@ function addChartItems(){
         alert("Nothing added to the cart");
         return;
     }
+
+    cart_items++;
+
+
+    if(cart_items == 1)
+    {
+        let empty = document.querySelector('div.empty');
+        empty.remove();
+    }
+
+
 
     let item_count = parseInt(cart_number.value);
     let item_price = parseInt(document.querySelector('span.price-tag').innerText);
@@ -94,6 +107,17 @@ function addChartItems(){
 function removeElement(){
     let parent = this.parentElement.parentElement;
     parent.remove();
+    cart_items--;
+    console.log(cart_items);
+    if (cart_items == 0)
+    {
+        let cart_information = document.querySelector('div.cart-information');
+        let empty = document.createElement('div');
+        let empty_text = document.createTextNode('Your cart is empty!');
+        empty.appendChild(empty_text);
+        empty.classList.add('empty');
+        cart_information.appendChild(empty);
+    }
 }
 
 
