@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="./styles/cart.css">
   <link rel="stylesheet" href="./styles/info.css">
   <link rel="stylesheet" href="./styles/popup.css">
+  <link rel="stylesheet" href="./styles/cart-items.css">
   
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
@@ -105,14 +106,14 @@
     <div class="information">
       <p>SNEAKER COMPANY</p>
       <h2>Fall Limited Edition Sneakers</h2>
-      <p class="description">These low profile sneakers are your perfect
+      <p class="deskeycription">These low profile sneakers are your perfect
         casual wear companion. Featuring a durable
         rubber outer sole, they'll withstand everything the weather an offer.
       </p>
 
       <div class="price">
       <div class="price-original">
-        <h3>Kshs 2500.00</h3>
+        <h3>Kshs <span>2500.00</span></h3>
         <span>50%</span>
       </div>
       <p>Kshs 5000.00</p>
@@ -124,7 +125,7 @@
         <span onclick="count(+1)" style="border-radius: 0 5px 5px 0;"><img src="./images/icon-plus.svg" alt="plus"></span>
       </div>
 
-      <button class="add-to-cart">
+      <button class="add-to-cart" onclick="addChartItems()">
         <img src="./images/icon-cart.svg" alt="cart">
         <p>Add to cart</p>
       </button>
@@ -142,6 +143,7 @@
       <img src="./images/icon-close.svg" alt="close" onclick="closeCart()">
     </div>
     <div class="cart-information">
+      <div class="checkout">Checkout</div>
       <p id="empty">Your cart is empty</p>
     </div>
   </div>
@@ -151,3 +153,4 @@
   <script src="./scripts/script.js"></script>
 </body>
 </html>
+

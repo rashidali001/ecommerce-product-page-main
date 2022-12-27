@@ -24,13 +24,20 @@ div.cart-heading{
 }
 div.cart-heading > img{
     width: 12px;
+    cursor: pointer;
 }
 div.cart-information{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
+    flex-direction: column;
+    height: auto;
 }
 p#empty{
     color: hsl(219, 9%, 45%);
+    display: none;
+}
+
+@media (min-width: 800px){
+    div.cart{
+        width: 40%;
+    }
 }

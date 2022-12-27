@@ -6,6 +6,7 @@
 }
 body{
     position: relative;
+    background-color: white;
 }
 nav{
     display: flex;
